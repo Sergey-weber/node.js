@@ -8,7 +8,8 @@ const requestHandler = (request, response) => {
     timeout = process.argv[3],
     sumInterval = 0
   
-  inter ? clearInterval(inter) : undefined
+    inter && clearInterval(inter)
+    console.log(inter)
 
   inter = setInterval(() => {
     console.info(`Вывод текущей даты и времени - ${new Date().toUTCString()}`);
